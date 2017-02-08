@@ -1,0 +1,16 @@
+@CHARSET "ISO-8859-1";
+
+#left{
+position: relative;
+    top: 100px;
+    left:+25%;
+    margin:0px 5px;
+}
+
+#right{
+	position: relative;
+	top: 30px;
+	left: +41%;
+}
+
+

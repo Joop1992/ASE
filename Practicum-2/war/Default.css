@@ -1,0 +1,52 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	position:relative;
+	background-image: url("resources/ATDBackground3.jpg");
+	background-size:1800px 1200px;
+    background-repeat: no-repeat;
+    background-position:center;
+	background-color:#336699;
+	color:#ffffff;
+	font-family:Trebuchet,Verdana,sans-serif;
+	font-size:1.5em;
+	margin:0% 10% 10% 10%;
+	border-width:8px 8px 8px 8px;
+	border-style:double double double double;
+	border-color:lightblue;
+}
+
+input, select {
+  padding : 0 0px;
+  margin  : 5;
+  height  : 3%;
+  width   : 15%;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.5);
+  
+  
+}
+
+input:focus, textarea:focus {
+  background   : rgba(0,0,0,.1);
+  border-radius: 5px;
+  outline      : none;
+}
+
+input {
+    height: 2.0em; /* for IE */
+    vertical-align: middle; /* This is optional but it makes legacy IEs look better */
+}
+
+textarea {
+  display : block;
+
+  padding : 10px;
+  margin  : 10px 0 0 -10px;
+  width   : 340px;
+  height  : 360px;
+
+  resize  : none;
+  overflow: auto;
+}
+

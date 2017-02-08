@@ -1,0 +1,25 @@
+@CHARSET "ISO-8859-1";
+
+#left{
+position: relative;
+    top: 100px;
+    left:+30%;
+}
+
+#right{
+position: relative;
+    top: -370px;
+    left:+50%;
+    margin:20px 20px;
+    padding:10px 10px;
+}
+
+p{
+	postion:relative;
+	margin:-5px 5px;
+}
+
+input{
+	position:relative;
+	margin:-5px 5px;
+}

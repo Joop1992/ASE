@@ -1,0 +1,27 @@
+@CHARSET "ISO-8859-1";
+
+#leftleft{
+position: relative;
+    top: 100px;
+    left:+20%;
+
+}
+
+#left{
+position: relative;
+    top: -40px;
+    left:+30%;
+
+}
+
+#right{
+position: relative;
+    top: -290px;
+    left:+65%;
+}
+
+#center{
+position: relative;
+    top: -440px;
+    left:+50%;
+}

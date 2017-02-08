@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<servlet>
+		<servlet-name>Dynamic Example Servlet</servlet-name>
+		<servlet-class>start.Register</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Dynamic Example Servlet</servlet-name>
+		<url-pattern>/Register.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Voorraadbeheer</servlet-name>
+		<servlet-class>start.VoorraadBeheer</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Voorraadbeheer</servlet-name>
+		<url-pattern>/VoorraadBeheer.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Werkplaats</servlet-name>
+		<servlet-class>start.Werkplaats</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Werkplaats</servlet-name>
+		<url-pattern>/Werkplaats.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Klusbeheer</servlet-name>
+		<servlet-class>start.KlusBeheer</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Klusbeheer</servlet-name>
+		<url-pattern>/KlusBeheer.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Monteurbeheer</servlet-name>
+		<servlet-class>start.MonteurBeheer</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Monteurbeheer</servlet-name>
+		<url-pattern>/MonteurBeheer.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Werkzaamheidbeheer</servlet-name>
+		<servlet-class>start.WerkzaamheidBeheer</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Werkzaamheidbeheer</servlet-name>
+		<url-pattern>/WerkzaamheidBeheer.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Parkeergarage</servlet-name>
+		<servlet-class>start.Parkeergarage</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Parkeergarage</servlet-name>
+		<url-pattern>/Parkeergarage.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ReserveringBeheer</servlet-name>
+		<servlet-class>start.ReserveringBeheer</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReserveringBeheer</servlet-name>
+		<url-pattern>/ReserveringBeheer.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Navigatie</servlet-name>
+		<servlet-class>start.Navigatie</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Navigatie</servlet-name>
+		<url-pattern>/Navigatie.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Overzicht verzenden</servlet-name>
+		<servlet-class>start.OverzichtVerzenden</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Overzicht verzenden</servlet-name>
+		<url-pattern>/OverzichtVerzenden.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Autobeheer</servlet-name>
+		<servlet-class>start.AutoBeheer</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Autobeheer</servlet-name>
+		<url-pattern>/AutoBeheer.do</url-pattern>
+	</servlet-mapping>
+	
+
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<jsp-file>/Login.jsp</jsp-file>
+		<init-param>
+			<param-name>dUser</param-name>
+			<param-value>defaultUser</param-value>
+		</init-param>
+		<init-param>
+			<param-name>dPass</param-name>
+			<param-value>defaultPassword</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/Login.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Login Servlet</servlet-name>
+		<servlet-class>start.Login</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Login Servlet</servlet-name>
+		<url-pattern>/Login.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>startpagina Servlet</servlet-name>
+		<servlet-class>start.StartPagina</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>startpagina Servlet</servlet-name>
+		<url-pattern>/StartPagina.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Gegevens beheer Servlet</servlet-name>
+		<servlet-class>start.GegevensBeheer</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Gegevens beheer Servlet</servlet-name>
+		<url-pattern>/GegevensBeheer.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Accountbeheer Servlet</servlet-name>
+		<servlet-class>start.AccountBeheer</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Accountbeheer Servlet</servlet-name>
+		<url-pattern>/AccountBeheer.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Klantbeheer Servlet</servlet-name>
+		<servlet-class>start.KlantBeheer</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Klantbeheer Servlet</servlet-name>
+		<url-pattern>/KlantBeheer.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>klant toevoegen Servlet</servlet-name>
+		<servlet-class>start.KlantToevoegen</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>klant toevoegen Servlet</servlet-name>
+		<url-pattern>/KlantToevoegen.do</url-pattern>
+	</servlet-mapping>
+
+</web-app>
