@@ -7,7 +7,7 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+//Changed the names of variables and this class
 //Extracted service class for the KlusBeheerServlet
 public class KlusBeheerService {
 	//Added constants
@@ -17,7 +17,7 @@ public class KlusBeheerService {
 	private static final String EMPTY_MONTH_FIELD = "Selecteer een maand";
 	private static final String DAY_NOT_FILLED_IN_ERROR = "Selecteer een dag ;";
 	private static final String EMPTY_DAY_FIELD = "Selecteer een dag";
-	private static final String ID_NOT_UNIQUE = "ID van de klus is niet uniek;";
+	private static final String ID_NOT_UNIQUE_ERROR = "ID van de klus is niet uniek;";
 	private static final String ID_NOT_FILLED_IN_ERROR = "Vul een identificatie nummer in; ";
 	private static final String JOB_NOT_FILLED_IN_ERROR = "Voeg eerst een werkzaamheid toe; ";
 	private static final String MECHANIC_NOT_FILLED_IN_ERROR = "Voeg eerst een monteur toe; ";
@@ -129,7 +129,7 @@ public class KlusBeheerService {
 			errorMessage += ID_NOT_FILLED_IN_ERROR;
 		} else {
 			if (!db.checkKlusID(Integer.parseInt(ID))) {
-				errorMessage += ID_NOT_UNIQUE;
+				errorMessage += ID_NOT_UNIQUE_ERROR;
 			}
 		}
 		return errorMessage;

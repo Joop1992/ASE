@@ -36,11 +36,11 @@ public class AutoBeheer extends HttpServlet {
 		merk = (String)req.getParameter("merk");
 		kenteken = req.getParameter("kenteken");
 		
-		if(merk.equals("")){
+		if(merk.isEmpty()){
 			toevoegen = false;
 			errMessage += "Voer een merk in; ";
 		}
-		if(kenteken.equals("")){
+		if(kenteken.isEmpty()){
 			toevoegen = false;
 			errMessage += "Voer een kenteken in;";
 		}
@@ -54,20 +54,13 @@ public class AutoBeheer extends HttpServlet {
 
 			}
 		}else if(req.getParameter("annuleren") != null){
-			//later if statement toevoegen voor onderscheid tussen baliemederwerken en klant
 			rd = req.getRequestDispatcher("StartPagina.jsp");
 		}else if(req.getParameter("verwijderen") != null){
 			try{
-				System.out.println("hallo1");
-				String autoNummer = (String)req.getParameter("auto");
-				System.out.println("hallo2"+autoNummer);
-				String aNr[] = autoNummer.split("|");
-				System.out.println("hallo3"+aNr[0]+" "+aNr[1]);
-				int autoID = Integer.parseInt(aNr[0]);
-				System.out.println("hallo4");
+				String autoGegevens = (String)req.getParameter("auto");
+				int autoID = Integer.parseInt(autoGegevens.split("|")[0]);
 				errMessage = db.removeAuto(autoID);
-				System.out.println("hallo5");
-			}catch(Exception e){System.out.println(e);}
+			}catch(Exception e){e.printStackTrace();}
 		}
 		req.setAttribute("msgs", errMessage);
 		rd.forward(req, resp);

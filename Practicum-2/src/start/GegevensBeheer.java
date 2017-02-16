@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -33,13 +32,12 @@ public class GegevensBeheer extends HttpServlet {
 		
 		try{
 			klantID = (Integer)req.getSession().getAttribute("klantID");
-		}catch(Exception e){System.out.println(e);}
+		}catch(Exception e){e.printStackTrace();}
 		
 		gebruikersNaam = (String)req.getParameter("naam");
 		wachtwoord = (String)req.getParameter("oudWachtwoord");
 		nieuwWachtwoord1 = (String)req.getParameter("nieuwWachtwoord1");
 		nieuwWachtwoord2 = (String)req.getParameter("nieuwWachtwoord2");
-		System.out.println("Inloggegevens: "+gebruikersNaam+"  "+wachtwoord);
 		
 		for(Klant k : klanten){
 			if(k.getID() == klantID){
@@ -48,31 +46,29 @@ public class GegevensBeheer extends HttpServlet {
 			}
 		}
 		
-		if(gebruikersNaam.equals("")){
+		if(gebruikersNaam.isEmpty()){
 			errMessage += "Vul een nieuwe gebruikersnaam in; ";
-			wijzigen = false;
 		}
 		
-		if(wachtwoord.equals("")){
+		if(wachtwoord.isEmpty()){
 			errMessage += "Vul uw huidige wachtwoord in; ";
-			wijzigen = false;
 		}else if(!wachtwoord.equals(huidigWachtwoord)){
 			errMessage += "Uw oude wachtwoord klopt niet; ";
-			wijzigen = false;
 		}
 		
-		if(nieuwWachtwoord1.equals("")){
+		if(nieuwWachtwoord1.isEmpty()){
 			errMessage += "Vul een nieuw wachtwoord in; ";
-			wijzigen = false;
 		}
 		
-		if(nieuwWachtwoord2.equals("")){
+		if(nieuwWachtwoord2.isEmpty()){
 			errMessage += "Herhaal nieuwe wachtwoord; ";
-			wijzigen = false;
 		}
 		
 		if(!nieuwWachtwoord1.equals(nieuwWachtwoord2)){
 			errMessage += "Uw nieuw wachtwoorden komen niet overeen";
+		}
+		
+		if(!errMessage.isEmpty()){
 			wijzigen = false;
 		}
 
