@@ -194,9 +194,9 @@ public class Database {
 	
 	public String removeAuto(int id){
 		String info = "Auto verwijderen mislukt";
-		Auto gooiWeg = new Auto("nep", "aaaaaa", -1);
+		AutoInterface gooiWeg = Auto.createAuto("nep", "aaaaaa", -1);
 		boolean found = false;
-		for(Auto a : autos){
+		for(AutoInterface a : autos){
 			if(a.getID() == id){
 				gooiWeg = a;
 				found = true;
@@ -334,7 +334,7 @@ public class Database {
 		String info = "Auto toevoegen mislukt";
 		if (o instanceof Auto) {
 			autos.add((Auto)o);
-			for(Auto a : autos){
+			for(AutoInterface a : autos){
 				System.out.println(a.getMerk()+a.getID());
 			}
             updateAutoList();
@@ -345,7 +345,7 @@ public class Database {
 	
 	public int getNewAutoID(){
 		int nextID = 1;
-		for(Auto a : autos){
+		for(AutoInterface a : autos){
 			if(a.getID()>nextID){
 				nextID = a.getID();
 			}

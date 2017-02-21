@@ -27,10 +27,10 @@ public class KlusBeheerService {
 	//Extracted method
 	public void addNewJobTask(HttpServletRequest req,
 			HttpServletResponse resp, RequestDispatcher rd, String monteurIDs,
-			String werkzaamhedenIDs, String werkzaamheidGegevens)
+			String werkzaamhedenIDs, String werkzaamheidInformatie)
 			throws ServletException, IOException {
-		if (!werkzaamheidGegevens.equals("Selecteer een werkzaamheid")) {
-			String werkzaamheid = werkzaamheidGegevens.split(":")[0];
+		if (!werkzaamheidInformatie.equals("Selecteer een werkzaamheid")) {
+			String werkzaamheid = werkzaamheidInformatie.split(":")[0];
 			String scanWerkzaamheden = werkzaamhedenIDs;
 			werkzaamhedenIDs = werkzaamhedenIDs.isEmpty() ? werkzaamheid : werkzaamhedenIDs + "," + werkzaamheid; 
 			boolean jobExists = checkIfJobExists(req, resp, monteurIDs, werkzaamheid,

@@ -64,7 +64,7 @@ public class Register extends HttpServlet{
 			int klantID = db.getNewKlantID();
 			int autoID = db.getNewAutoID();
 			Klant k = new Klant(gebruikersNaam, e1, w1, klantID);
-			Auto a = new Auto(autoMerk, kenteken, autoID);
+			AutoInterface a = Auto.createAuto(autoMerk, kenteken, autoID);
 			a.setKlantNummer(klantID);
 			errMessage = db.addKlant(k);
 			if(errMessage.equals("Klant toegevoegd")){

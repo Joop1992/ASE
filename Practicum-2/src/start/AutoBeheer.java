@@ -47,7 +47,7 @@ public class AutoBeheer extends HttpServlet {
 
 		if (req.getParameter("autotoevoegen") != null) {
 			if(toevoegen){
-				Auto a = new Auto(merk, kenteken, db.getNewAutoID());
+				AutoInterface a = Auto.createAuto(merk, kenteken, db.getNewAutoID());
 				a.setKlantNummer(klantID);
 				db.addAuto(a);
 				errMessage = "Auto toegevoegd";

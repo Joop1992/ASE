@@ -59,8 +59,8 @@ public class KlusBeheerServlet extends HttpServlet {
 
 		} else if (req.getParameter("WerkzaamheidToevoegen") != null && werkzaamheidGegevens != "Selecteer een werkzaamheid") {
 			rd = req.getRequestDispatcher("KlusBeheer.jsp");
-			klusBeheerService.addNewJobTask(req, resp, rd, monteurIDs, werkzaamhedenIDs,
-					werkzaamheidGegevens);
+			klusBeheerService.addNewJobTask(new AddNewJobTaskParameter(req, resp, rd, monteurIDs,
+					werkzaamhedenIDs, werkzaamheidGegevens));
 		} else {
 			req.setAttribute("msgs", errorMessage);
 		}

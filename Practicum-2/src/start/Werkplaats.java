@@ -102,7 +102,7 @@ public class Werkplaats extends HttpServlet{
 			String status = selected.getStatus();
 			String auto = "";
 			int autoID = selected.getAutoID();
-			for(Auto a : autos){
+			for(AutoInterface a : autos){
 				if(a.getID() == autoID){
 					auto = a.getMerk()+" - "+a.getKenteken();
 				}
