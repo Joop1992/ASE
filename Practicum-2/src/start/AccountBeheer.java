@@ -55,35 +55,17 @@ public class AccountBeheer extends HttpServlet {
 		}else{
 			IDI = Integer.parseInt(ID);
 		}
-		
-		if(rechtenWerkplaats != null){
-			rechten += "1,";
-		}else{
-			rechten += "-,";
-		}
-		
-		if(rechtenVoorraadBeheer != null){
-			rechten += "2,";
-		}else{
-			rechten += "-,";
-		}
-		
-		if(rechtenParkeergarage != null){
-			rechten += "3,";
-		}else{
-			rechten += "-,";
-		}
-		
-		if(rechtenBalieMedewerker != null){
-			rechten += "4,";
-		}else{
-			rechten += "-,";
-		}
-		
-		if(rechtenAdmin != null){
-			rechten += "5,";
-		}else{
-			rechten += "-,";
+
+		String[] rechten = new String[rechtenWerkplaats, rechtenVoorraadBeheer, rechtenParkeergarage, rechtenBalieMedewerker, rechtenAdmin];
+
+		for (int i = 0; i < 5; i++){
+			if (rechten[i] != null){
+				rechten += i+1 + ",";
+			}
+			else
+			{
+				rechten += "-,";
+			}
 		}
 
 		if (req.getParameter("aanmaken") != null) {
