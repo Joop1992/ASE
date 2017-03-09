@@ -29,43 +29,53 @@ public class Database {
 		createDirs();
 		try {
 			ois = new ObjectInputStream(new FileInputStream(new File("C:/users/Public/database/brandstoffen.db")));
-			brandstoffen = (ArrayList<Brandstof>) ois.readObject();
+			brandstoffen = (ArrayList<Brandstof>) ois.readObject(); 
+			ois.close();
 		} catch (Exception e) {System.out.println("Er zijn nog geen brandstoffen aangemaakt");}
 		try {
 			ois = new ObjectInputStream(new FileInputStream(new File("C:/users/Public/database/onderdelen.db")));
-			onderdelen = (ArrayList<Onderdeel>) ois.readObject();
+			onderdelen = (ArrayList<Onderdeel>) ois.readObject(); 
+			ois.close();
 		} catch (Exception e) {System.out.println("Er zijn nog geen onderdelen aangemaakt");}
 		try {
 			ois = new ObjectInputStream(new FileInputStream(new File("C:/users/Public/database/reserveringen.db")));
-			reserveringen = (ArrayList<Reservering>) ois.readObject();
+			reserveringen = (ArrayList<Reservering>) ois.readObject(); 
+			ois.close();
 		} catch (Exception e) {System.out.println("Er zijn nog geen reserveringen aangemaakt");}
 		try {
 			ois = new ObjectInputStream(new FileInputStream(new File("C:/users/Public/database/bestellingen.db")));
-			bestellingen = (ArrayList<Bestelling>) ois.readObject();
+			bestellingen = (ArrayList<Bestelling>) ois.readObject(); 
+			ois.close();
 		} catch (Exception e) {System.out.println("Er zijn nog geen bestelling aangemaakt");}
 		try {
 			ois = new ObjectInputStream(new FileInputStream(new File("C:/users/Public/database/monteurs.db")));
-			monteurs = (ArrayList<Monteur>) ois.readObject();
+			monteurs = (ArrayList<Monteur>) ois.readObject(); 
+			ois.close();
 		} catch (Exception e) {System.out.println(e);}
 		try {
 			ois = new ObjectInputStream(new FileInputStream(new File("C:/users/Public/database/werkzaamheden.db")));
-			werkzaamheden = (ArrayList<Werkzaamheid>) ois.readObject();
+			werkzaamheden = (ArrayList<Werkzaamheid>) ois.readObject(); 
+			ois.close();
 		} catch (Exception e) {System.out.println(e);}
 		try {
 			ois = new ObjectInputStream(new FileInputStream(new File("C:/users/Public/database/klussen.db")));
-			klussen = (ArrayList<Klus>) ois.readObject();
+			klussen = (ArrayList<Klus>) ois.readObject(); 
+			ois.close();
 		} catch (Exception e) {System.out.println(e);}
 		try {
 			ois = new ObjectInputStream(new FileInputStream(new File("C:/users/Public/database/klanten.db")));
-			klanten = (ArrayList<Klant>) ois.readObject();
+			klanten = (ArrayList<Klant>) ois.readObject(); 
+			ois.close();
 		} catch (Exception e) {System.out.println(e);}
 		try {
 			ois = new ObjectInputStream(new FileInputStream(new File("C:/users/Public/database/autos.db")));
 			autos = (ArrayList<Auto>) ois.readObject();
+			ois.close(); 
 		} catch (Exception e) {System.out.println(e);}
 		try {
 			ois = new ObjectInputStream(new FileInputStream(new File("C:/users/Public/database/werknemers.db")));
 			werknemers = (ArrayList<Werknemer>) ois.readObject();
+			ois.close();
 		} catch (Exception e) {System.out.println(e);}
 		try{
 			ois.close();

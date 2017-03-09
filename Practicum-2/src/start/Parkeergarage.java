@@ -26,6 +26,8 @@ public class Parkeergarage extends HttpServlet{
 		}else if(req.getParameter("start") != null){
 			rd = req.getRequestDispatcher("Navigatie.jsp");
 		}
-		rd.forward(req, resp);
+		if(rd != null){
+			rd.forward(req, resp);
+		}
 	}
 }

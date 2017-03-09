@@ -99,6 +99,8 @@ public class AccountBeheer extends HttpServlet {
 		}else if(req.getParameter("annuleren") != null){
 			rd = req.getRequestDispatcher("Navigatie.jsp");
 		}
-		rd.forward(req, resp);
+		if(rd != null){
+			rd.forward(req, resp);
+		}	 	
 	}
 }

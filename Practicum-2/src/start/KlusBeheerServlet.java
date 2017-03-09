@@ -65,7 +65,9 @@ public class KlusBeheerServlet extends HttpServlet {
 			req.setAttribute("msgs", errorMessage);
 		}
 		req.getSession().removeAttribute("klantID");
-		rd.forward(req, resp);
+		if(rd != null) {
+			rd.forward(req, resp);
+		}
 	}
 
 

@@ -62,6 +62,8 @@ public class StartPagina extends HttpServlet {
 				rd = req.getRequestDispatcher("GegevensBeheer.jsp");
 			}
 		}
-		rd.forward(req, resp);
+		if(rd != null){
+			rd.forward(req, resp);
+		}
 	}
 }
