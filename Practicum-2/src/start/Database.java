@@ -31,55 +31,55 @@ public class Database {
 			ois = new ObjectInputStream(new FileInputStream(new File("C:/users/Public/database/brandstoffen.db")));
 			brandstoffen = (ArrayList<Brandstof>) ois.readObject(); 
 			ois.close();
-		} catch (Exception e) {System.out.println("Er zijn nog geen brandstoffen aangemaakt");}
+		} catch (Exception e) {System.out.println("Er zijn nog geen brandstoffen aangemaakt");throw(e)}
 		try {
 			ois = new ObjectInputStream(new FileInputStream(new File("C:/users/Public/database/onderdelen.db")));
 			onderdelen = (ArrayList<Onderdeel>) ois.readObject(); 
 			ois.close();
-		} catch (Exception e) {System.out.println("Er zijn nog geen onderdelen aangemaakt");}
+		} catch (Exception e) {System.out.println("Er zijn nog geen onderdelen aangemaakt");throw(e)}
 		try {
 			ois = new ObjectInputStream(new FileInputStream(new File("C:/users/Public/database/reserveringen.db")));
 			reserveringen = (ArrayList<Reservering>) ois.readObject(); 
 			ois.close();
-		} catch (Exception e) {System.out.println("Er zijn nog geen reserveringen aangemaakt");}
+		} catch (Exception e) {System.out.println("Er zijn nog geen reserveringen aangemaakt");throw(e)}
 		try {
 			ois = new ObjectInputStream(new FileInputStream(new File("C:/users/Public/database/bestellingen.db")));
 			bestellingen = (ArrayList<Bestelling>) ois.readObject(); 
 			ois.close();
-		} catch (Exception e) {System.out.println("Er zijn nog geen bestelling aangemaakt");}
+		} catch (Exception e) {System.out.println("Er zijn nog geen bestelling aangemaakt");throw(e)}
 		try {
 			ois = new ObjectInputStream(new FileInputStream(new File("C:/users/Public/database/monteurs.db")));
 			monteurs = (ArrayList<Monteur>) ois.readObject(); 
 			ois.close();
-		} catch (Exception e) {System.out.println(e);}
+		} catch (Exception e) {System.out.println(e);throw(e)}
 		try {
 			ois = new ObjectInputStream(new FileInputStream(new File("C:/users/Public/database/werkzaamheden.db")));
 			werkzaamheden = (ArrayList<Werkzaamheid>) ois.readObject(); 
 			ois.close();
-		} catch (Exception e) {System.out.println(e);}
+		} catch (Exception e) {System.out.println(e);throw(e)}
 		try {
 			ois = new ObjectInputStream(new FileInputStream(new File("C:/users/Public/database/klussen.db")));
 			klussen = (ArrayList<Klus>) ois.readObject(); 
 			ois.close();
-		} catch (Exception e) {System.out.println(e);}
+		} catch (Exception e) {System.out.println(e);throw(e)}
 		try {
 			ois = new ObjectInputStream(new FileInputStream(new File("C:/users/Public/database/klanten.db")));
 			klanten = (ArrayList<Klant>) ois.readObject(); 
 			ois.close();
-		} catch (Exception e) {System.out.println(e);}
+		} catch (Exception e) {System.out.println(e);throw(e)}
 		try {
 			ois = new ObjectInputStream(new FileInputStream(new File("C:/users/Public/database/autos.db")));
 			autos = (ArrayList<Auto>) ois.readObject();
 			ois.close(); 
-		} catch (Exception e) {System.out.println(e);}
+		} catch (Exception e) {System.out.println(e);throw(e)}
 		try {
 			ois = new ObjectInputStream(new FileInputStream(new File("C:/users/Public/database/werknemers.db")));
 			werknemers = (ArrayList<Werknemer>) ois.readObject();
 			ois.close();
-		} catch (Exception e) {System.out.println(e);}
+		} catch (Exception e) {System.out.println(e);throw(e)}
 		try{
 			ois.close();
-		}catch(Exception e){System.out.println("sluiten ging fout"+e);}
+		}catch(Exception e){System.out.println("sluiten ging fout"+e); throw(e)}
 		adminToevoegen();
 	}
 
