@@ -15,30 +15,28 @@ public class Login extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		boolean LoginSuccess = false; 
+		boolean LoginSuccess; 
 		boolean verified = false;
 		boolean loginWerknemer = false;
 		String rechten;
+		RequestDispatcher rd;
 		ArrayList<User> users = (ArrayList<User>) req.getServletContext().getAttribute("userArray");
 		Database db = new Database();
 		ArrayList<Klant> klanten = db.getList("klanten");
 		ArrayList<Werknemer> werknemers = db.getList("werknemers");
 		if(users == null){
 			System.out.println("nieuwe arraylist aanmaken");
-			ArrayList<User> nieuw = new ArrayList<User>();
-			users = nieuw;
 		}
 		
 		String errMessage = "Vul alstublieft deze gegevens in: ";
-		RequestDispatcher rd = null;
 
 		String gebruikersNaam = req.getParameter("gebruikersNaam");
 		String wachtwoord = req.getParameter("wachtwoord");
 
 		resp.setContentType("text/html");
 		
-		if(gebruikersNaam == ""){errMessage += "gebruikersnaam; ";LoginSuccess = false;}
-		if(wachtwoord == ""){ errMessage += "naam; ";LoginSuccess = false;}
+		if(gebruikersNaam == ""){errMessage += "gebruikersnaam; ";}
+		if(wachtwoord == ""){ errMessage += "naam; ";}
 		
 		for(Klant k : klanten){
 			System.out.println("LOGIN:::::"+k.getNaam()+"-"+k.getWachtwoord());

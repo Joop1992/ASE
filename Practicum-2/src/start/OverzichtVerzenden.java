@@ -35,6 +35,8 @@ public class OverzichtVerzenden extends HttpServlet{
 			rd = req.getRequestDispatcher("Parkeergarage.jsp");
 		}
 		req.setAttribute("msgs", errMessage);
-		rd.forward(req, resp);
+		if(rd != null){
+			rd.forward(req, resp);
+		}
 	}
 }

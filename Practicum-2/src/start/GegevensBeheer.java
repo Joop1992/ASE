@@ -90,6 +90,8 @@ public class GegevensBeheer extends HttpServlet {
 		}else if (req.getParameter("annuleren") != null) {
 			rd = req.getRequestDispatcher("StartPagina.jsp");
 		}
-		rd.forward(req, resp);
+		if(rd != null){
+			rd.forward(req, resp);
+		}
 	}
 }

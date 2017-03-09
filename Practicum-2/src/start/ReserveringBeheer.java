@@ -97,6 +97,8 @@ public class ReserveringBeheer extends HttpServlet {
 		}
 		req.setAttribute("msgs", errMessage);
 		
-		rd.forward(req, resp);
+		if(rd != null){
+			rd.forward(req, resp);
+		}
 	}
 }

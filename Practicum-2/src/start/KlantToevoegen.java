@@ -42,6 +42,8 @@ public class KlantToevoegen extends HttpServlet{
 			rd = req.getRequestDispatcher("KlantBeheer.jsp");
 		}
 		req.setAttribute("msgs", errMessage);
-		rd.forward(req, resp);
+		if(rd != null){
+			rd.forward(req, resp);
+		}
 	}
 }

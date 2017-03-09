@@ -31,6 +31,9 @@ public class Navigatie extends HttpServlet{
 			req.getSession().removeAttribute("rechten");
 			rd = req.getRequestDispatcher("Login.jsp");
 		}
-		rd.forward(req, resp);
+		if(rd != null){
+			rd.forward(req, resp);
+		}
+		
 	}
 }
